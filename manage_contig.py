@@ -1,0 +1,11 @@
+x = open("iso1_onta2_canu_contigs.fasta")
+content = x.read()
+x.close()
+print(len(content))
+content.replace("N", " ")
+content = content.split()
+print(len(content))
+x = open("contig.txt", "w")
+for i in content:
+    x.write(i)
+x.close()
